@@ -3,7 +3,7 @@
 	import Event from '$lib/components/Event.svelte';
 	import Look from '$lib/components/Look.svelte';
 	import Sound from '$lib/components/Sound.svelte';
-	import Sprite from '$lib/components/Sprite.svelte';
+	import Stage from '$lib/components/Stage.svelte';
 
 	const rickroll = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
 	const linkStyle =
@@ -76,30 +76,32 @@
 
 <!-- Landing content --------------------------------------------------------->
 
-<div class="relative top-20">
-	<div class="absolute">
-		<Event withFlag={true} />
+<div>
+	<div class="relative top-20">
+		<div class="absolute">
+			<Event withFlag={true} />
+		</div>
+		<div class="absolute top-[54px]">
+			<Look type="costume" />
+		</div>
+		<div class="absolute top-[102px]">
+			<Look type="backdrop" />
+		</div>
+		<div class="absolute top-[150px]">
+			<Look type="say" />
+		</div>
 	</div>
-	<div class="absolute top-[54px]">
-		<Look type="costume" />
-	</div>
-	<div class="absolute top-[102px]">
-		<Look type="backdrop" />
-	</div>
-	<div class="absolute top-[150px]">
-		<Look type="say" />
+
+	<div class="relative top-80">
+		<div class="absolute">
+			<Event withFlag={false} />
+		</div>
+		<div class="absolute top-[54px]">
+			<Sound />
+		</div>
 	</div>
 </div>
 
-<div class="relative top-80">
-	<div class="absolute">
-		<Event withFlag={false} />
-	</div>
-	<div class="absolute top-[54px]">
-		<Sound />
-	</div>
-</div>
-
-<div class="relative left-80 top-40">
-	<Sprite />
+<div class="relative left-96 top-20">
+	<Stage />
 </div>

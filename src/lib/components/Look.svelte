@@ -1,11 +1,12 @@
 <script>
-	import { prompt } from '$lib/stores';
+	import { prompt, flag } from '$lib/stores';
 	const style = 'm-0 p-0 absolute top-6 text-white';
 	const stroke = '#774DCB';
 	const fill = '#855CD6';
 	import Block from './Block.svelte';
 
 	export let type = 'costume'; // or 'backdrop'
+	let input_value = "Let's about gender equity !";
 </script>
 
 {#if type === 'costume'}
@@ -28,7 +29,13 @@
 	<div class="relative w-80 text-while">
 		<p class="{style} left-4">say</p>
 		<input
-			bind:value={$prompt}
+			bind:value={input_value}
+			on:focus={() => {
+				$flag = false;
+			}}
+			on:change={() => {
+				$prompt = input_value;
+			}}
 			class="m-0 p-0 absolute top-6 left-16 text-gray-600 px-1 rounded-full"
 			type="text"
 			maxlength="65"

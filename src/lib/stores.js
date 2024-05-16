@@ -1,3 +1,4 @@
 import { writable } from 'svelte/store';
 
-export const prompt = writable("Let's learn scratch");
+export const prompt = writable("Let's about gender equity !");
+export const flag = writable(false);
