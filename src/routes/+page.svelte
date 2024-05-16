@@ -3,6 +3,7 @@
 	import Event from '$lib/components/Event.svelte';
 	import Look from '$lib/components/Look.svelte';
 	import Sound from '$lib/components/Sound.svelte';
+	import Sprite from '$lib/components/Sprite.svelte';
 
 	const rickroll = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
 	const linkStyle =
@@ -75,7 +76,7 @@
 
 <!-- Landing content --------------------------------------------------------->
 
-<div class="relative">
+<div class="relative top-20">
 	<div class="absolute">
 		<Event withFlag={true} />
 	</div>
@@ -97,4 +98,8 @@
 	<div class="absolute top-[54px]">
 		<Sound />
 	</div>
+</div>
+
+<div class="relative left-80 top-40">
+	<Sprite />
 </div>
