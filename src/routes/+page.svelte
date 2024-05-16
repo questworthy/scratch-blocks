@@ -1,5 +1,6 @@
 <script>
 	import logo from '$lib/assets/logo.svg';
+	import Block from '$lib/components/Block.svelte';
 
 	const rickroll = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
 	const linkStyle =
@@ -72,55 +73,5 @@
 
 <!-- Landing content --------------------------------------------------------->
 
-<div class="w-80 h-40">
-	<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" class="bg-red-200">
-		<g transform="translate(10, 25)">
-			<path
-				class=""
-				stroke="#CC9900"
-				fill="#FFBF00"
-				fill-opacity="1"
-				d="m 0,0 c 25,-22 71,-22 96,0 H 260  a 4,4 0 0,1 4,4 v 40  a 4,4 0 0,1 -4,4 H 48   c -2,0 -3,1 -4,2 l -4,4 c -1,1 -2,2 -4,2 h -12 c -2,0 -3,-1 -4,-2 l -4,-4 c -1,-1 -2,-2 -4,-2 H 4 a 4,4 0 0,1 -4,-4 z"
-			>
-			</path>
-			<text fill="white" stroke="white" stroke-width="0.5" transform="translate(10,30)">
-				when this sprite clicked
-			</text>
-		</g>
-		<g transform="translate(10, 74)">
-			<path
-				class="blocklyPath blocklyBlockBackground"
-				stroke="#BD42BD"
-				fill="#CF63CF"
-				fill-opacity="1"
-				d="m 0,4 A 4,4 0 0,1 4,0 H 12 c 2,0 3,1 4,2 l 4,4 c 1,1 2,2 4,2 h 12 c 2,0 3,-1 4,-2 l 4,-4 c 1,-1 2,-2 4,-2 H 220 a 4,4 0 0,1 4,4 v 40  a 4,4 0 0,1 -4,4 H 48   c -2,0 -3,1 -4,2 l -4,4 c -1,1 -2,2 -4,2 h -12 c -2,0 -3,-1 -4,-2 l -4,-4 c -1,-1 -2,-2 -4,-2 H 4 a 4,4 0 0,1 -4,-4 z"
-			>
-			</path>
-			<g transform="translate(130,8)">
-				<path
-					transition:draw={{ duration: 5000, delay: 500, easing: quintOut }}
-					stroke="#BD42BD"
-					fill="#C94FC9"
-					fill-opacity="1"
-					d="m 0,0 m 16,0 H 60 a 16 16 0 0 1 0 32 H 16 a 16 16 0 0 1 0 -32 z"
-				></path>
-				<g class="blocklyEditableText" style="cursor: default;" transform="translate(8, 0) "
-					><text
-						x="25"
-						y="18"
-						fill="white"
-						stroke="white"
-						stroke-width="0.5"
-						dominant-baseline="middle"
-						dy="0"
-						text-anchor="middle">Meow</text
-					>
-				</g>
-			</g>
-
-			<text fill="white" stroke="white" stroke-width="0.5" transform="translate(10,30)">
-				start sound
-			</text>
-		</g>
-	</svg>
-</div>
+<Block />
+<Block type="event" />
